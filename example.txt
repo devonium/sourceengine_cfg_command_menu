@@ -1,0 +1,12 @@
+[KEY: KP_INS]
+[Cock GG Cock] say ⡔⭘ﾐﾐﾐﾐﾐﮞﻝ GG ⡔⭘ﾐﾐﾐﾐﾐﮞﻝ
+[Spin] +left;wait 1000;-left
+[Test1] say test1
+[Test2] say test2
+[Test3] say test3
+[Test4] say test4
+[Test5] say test5
+[Test6] say test6
+[Test7] say test7
+[Test8] say test8
+[Test9] say test9
