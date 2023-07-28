@@ -8,7 +8,8 @@ https://nav.dl.sourceforge.net/project/luabinaries/5.4.2/Tools%20Executables/lua
 lua54.exe commandmenu_generator.lua example.txt
 ```
 
-![](https://i.imgur.com/UfRhpwD.png)
+![](https://i.imgur.com/1n2mqmd.png)
+![](https://i.imgur.com/UYXr8eX.png)
 ```
 lua54.exe commandmenu_generator.lua example.txt -extended
 ```
