@@ -1,12 +1,17 @@
 [KEY: KP_INS]
+
 [Cock GG Cock] say ⡔⭘ﾐﾐﾐﾐﾐﮞﻝ GG ⡔⭘ﾐﾐﾐﾐﾐﮞﻝ
 [Spin] +left;wait 1000;-left
-[Test1] say test1
-[Test2] say test2
-[Test3] say test3
-[Test4] say test4
-[Test5] say test5
-[Test6] say test6
-[Test7] say test7
-[Test8] say test8
-[Test9] say test9
+
+[CMD]
+[Headbang mode] cmdheadbang;bindmenu_reopen
+[CFG]
+alias cmdheadbang_activate "m_yaw 0; bind mouse1 cmdheadbang_deactivate; alias cmdheadbang cmdheadbang_deactivate;cmdheadbang_on;bindmenu_updatepage"
+alias cmdheadbang_deactivate "m_yaw 0.022;bind mouse1 +attack; alias cmdheadbang cmdheadbang_activate;cmdheadbang_off"
+alias cmdheadbang cmdheadbang_activate
+
+alias cmdheadbang_on "alias bindmenu_page{CURRCMD_PAGE}_slot{CURRCMD_SLOT} echo {CURRCMD_NAME}.[ON]"
+alias cmdheadbang_off "alias bindmenu_page{CURRCMD_PAGE}_slot{CURRCMD_SLOT} echo {CURRCMD_NAME}.[OFF]"
+cmdheadbang_off
+[CMD]
+
