@@ -7,11 +7,10 @@
 [Headbang mode] cmdheadbang;bindmenu_reopen
 [CFG]
 alias cmdheadbang_activate "m_yaw 0; bind mouse1 cmdheadbang_deactivate; alias cmdheadbang cmdheadbang_deactivate;cmdheadbang_on;bindmenu_updatepage"
-alias cmdheadbang_deactivate "m_yaw 0.022;bind mouse1 +attack; alias cmdheadbang cmdheadbang_activate;cmdheadbang_off"
+alias cmdheadbang_deactivate "m_yaw 0.022;bind mouse1 +attack; alias cmdheadbang cmdheadbang_activate;cmdheadbang_off;bindmenu_updatepage"
 alias cmdheadbang cmdheadbang_activate
 
 alias cmdheadbang_on "alias bindmenu_page{CURRCMD_PAGE}_slot{CURRCMD_SLOT} echo {CURRCMD_NAME}.[ON]"
 alias cmdheadbang_off "alias bindmenu_page{CURRCMD_PAGE}_slot{CURRCMD_SLOT} echo {CURRCMD_NAME}.[OFF]"
 cmdheadbang_off
 [CMD]
-
