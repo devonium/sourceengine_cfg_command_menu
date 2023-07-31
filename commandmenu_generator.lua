@@ -34,10 +34,13 @@ alias bindmenu_currentpage bindmenu_page1
 (ExtendedMenu and ([[alias bindmenu_printpage "clear;con_filter_enable 0;wait 5;bindmenu_slot1;bindmenu_slot2;bindmenu_slot3;bindmenu_slot4;bindmenu_slot5;bindmenu_slot6;bindmenu_slot7;bindmenu_slot8;wait 5;con_filter_enable 1;"]]) or ([[alias bindmenu_printpage "clear;con_filter_enable 0;wait 5;bindmenu_slot1;bindmenu_slot2;bindmenu_slot3;bindmenu_slot4;bindmenu_slot5;bindmenu_slot6;wait 5;con_filter_enable 1;""]])) ..
 [[
 
-alias bindmenu_open "bindmenu_bindclosekey;wait 25; bindmenu_override_46;developer 1;con_notifytime 10000;bindmenu_page1"
-alias bindmenu_reopen "wait 1;bindmenu_bindclosekey;wait 25; bindmenu_override_46;developer 1;con_notifytime 10000;bindmenu_currentpage"
-alias bindmenu_updatepage "bindmenu_printpage"
-alias bindmenu_close "bindmenu_bindopenkey;developer 0;con_filter_enable 0;con_notifytime 8;bindmenu_restore_19"
+alias bindmenu_open "bindmenu_enableupdatepage;bindmenu_bindclosekey;wait 25; bindmenu_override_46;developer 1;con_notifytime 10000;bindmenu_page1"
+alias bindmenu_reopen "wait 1;bindmenu_enableupdatepage;bindmenu_bindclosekey;wait 25; bindmenu_override_46;developer 1;con_notifytime 10000;bindmenu_currentpage"
+alias bindmenu_enableupdatepage "alias bindmenu_updatepage bindmenu_printpage"
+alias bindmenu_updatepage ""
+alias bindmenu_disableupdatepage "alias bindmenu_updatepage "
+
+alias bindmenu_close "bindmenu_disableupdatepage;bindmenu_bindopenkey;developer 0;con_filter_enable 0;con_notifytime 8;bindmenu_restore_19"
 alias bindmenu_next ""
 alias bindmenu_prev ""
 ]] ..
