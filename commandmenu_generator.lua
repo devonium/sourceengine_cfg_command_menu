@@ -97,7 +97,7 @@ do
 		then
 			line = line:gsub("{CURRCMD_PAGE}", math.ceil(#lines / menuLinesCount))
 			line = line:gsub("{CURRCMD_SLOT}", #lines % (menuLinesCount+1))
-			line = line:gsub("{CURRCMD_NAME}", #lines % (menuLinesCount+1) .. '.' .. (lines[#lines])[1]:gsub(" ", "."))
+			line = line:gsub("{CURRCMD_NAME}", #lines % (menuLinesCount+1) .. '.' .. (lines[#lines] or {""})[1]:gsub(" ", "."))
 			postCfg = postCfg .. line .. "\n"
 		else
 			local name, cmd = line:match("%[(.*)]"), line:match("%[.*][%s]?(.*)")
