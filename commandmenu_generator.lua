@@ -135,9 +135,9 @@ do
 		line_ind = line_ind + 1
 	end
 	
-	
-	l = l .. 'alias bindmenu_page' .. page_ind .. '_prev ' .. ((page_ind == 1) and ('""') or ('bindmenu_page' .. (page_ind - 1))) .. '\n'
-	l = l .. 'alias bindmenu_page' .. page_ind .. '_next ' .. ((line_ind <= lines_count) and ('bindmenu_page' .. (page_ind + 1)) or ('""')) .. '\n'
+
+	l = l .. 'alias bindmenu_page' .. page_ind .. '_prev ' .. ((page_ind == 1) and ('bindmenu_page' .. (page_count)) or ('bindmenu_page' .. (page_ind - 1))) .. '\n'
+	l = l .. 'alias bindmenu_page' .. page_ind .. '_next ' .. ((line_ind <= lines_count) and ('bindmenu_page' .. (page_ind + 1)) or ('"bindmenu_page1"')) .. '\n'
 	
 	l = l .. bindmenu_page .. "bindmenu_page".. page_ind .. '_setup;' .. ';alias bindmenu_slot'..(ExtendedMenu and 8 or 6)..' echo "'..(ExtendedMenu and 8 or 6)..'.EXIT.[' .. page_ind .. '/' .. page_count .. ']"' .. ';bindmenu_printpage"\n' 
 	l = l .. "alias bindmenu_page".. page_ind .. '_setup "' .. 'alias bindmenu_next' ..	' bindmenu_page'.. page_ind .. '_next ' .. ';alias bindmenu_prev' ..' bindmenu_page'.. page_ind .. '_prev ' .. '"'
