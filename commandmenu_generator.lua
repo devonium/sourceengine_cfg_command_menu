@@ -36,7 +36,7 @@ alias bindmenu_currentpage bindmenu_page1
 
 alias bindmenu_open "bindmenu_bindclosekey;wait 25; bindmenu_override_46;developer 1;con_notifytime 10000;bindmenu_page1"
 alias bindmenu_reopen "wait 1;bindmenu_bindclosekey;wait 25; bindmenu_override_46;developer 1;con_notifytime 10000;bindmenu_currentpage"
-alias bindmenu_updatepage "bindmenu_currentpage"
+alias bindmenu_updatepage "bindmenu_printpage"
 alias bindmenu_close "bindmenu_bindopenkey;developer 0;con_filter_enable 0;con_notifytime 8;bindmenu_restore_19"
 alias bindmenu_next ""
 alias bindmenu_prev ""
